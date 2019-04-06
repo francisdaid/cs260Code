@@ -22,14 +22,17 @@ int recursiveBinarySearch(int value, int arr[], int arrSize) {
 
 //returns location of value or -1 if not present
 int binarySearch(int value, int arr[], int arrSize) {
-    int low = 0, high = arrSize - 1, mid = 0;
+    int low = 0, high = arrSize - 1, mid;
     while(low <= high) {
         mid = (low + high) / 2;
         if(arr[mid] > value) {
             high = mid - 1;
         }
         else if (arr[mid] < value) {
-
+            low = mid + 1;
+        }
+        else {
+            return mid;
         }
     }
     return -1;
