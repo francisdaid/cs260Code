@@ -11,6 +11,11 @@ using namespace std;
 //low and high represent the
 //returns location of value or -1 if not present
 int recursiveBinarySearchHelper(int value, int arr[], int low, int high) {
+    if(low >= 1) {
+        int mid = (low + high) / 2;
+        if(arr[mid] == value)
+            return mid;
+    }
     return -1; //TODO - fixme
 }
 
