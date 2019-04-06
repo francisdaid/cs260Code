@@ -15,6 +15,10 @@ int recursiveBinarySearchHelper(int value, int arr[], int low, int high) {
         int mid = (low + high) / 2;
         if(arr[mid] == value)
             return mid;
+        if(arr[mid] > high)
+            return recursiveBinarySearchHelper(value, arr, mid - 1, high);
+        else
+            return recursiveBinarySearchHelper(value, arr, mid + 1, high);
     }
     return -1; //TODO - fixme
 }
