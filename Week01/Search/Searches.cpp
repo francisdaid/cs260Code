@@ -38,9 +38,6 @@ int binarySearch(int value, int arr[], int arrSize) {
     return -1;
 }
 
-
-
-
 //pick number 1-1,000,000
 int randomValue() {
     int thousands = rand() % 1000;
