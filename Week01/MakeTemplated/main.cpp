@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "Double.h"
 #include "Helper.h"
 
